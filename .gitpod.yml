@@ -1,0 +1,13 @@
+github:
+  prebuilds:
+    addBadge: true
+    addComment: false
+    addCheck: false
+    master: true
+    branches: true
+    pullRequestsFromForks: true
+
+vscode:
+  extensions:
+    - ms-vscode.cpptools@0.28.3:mjRj37VUK0nY2ZeDXzxOJA==
+    - DavidAnson.vscode-markdownlint@0.36.1:qV04OEElMWIf9PHKK19GYA==
