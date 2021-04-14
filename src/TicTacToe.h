@@ -546,7 +546,7 @@ namespace TicTacToe {
 
 	}
 	private: System::Void restart_game(System::Object^ sender, System::EventArgs^ e) {
-		System::Windows::Forms::DialogResult result = MessageBox::Show(this, "Are you sure you want to end match?", "Restart game", MessageBoxButtons::YesNo, MessageBoxIcon::Exclamation);
+		 this->button11->Click += gcnew System::EventHandler(this, &TicTacToe::restart_game);
 
 		if (System::Windows::Forms::DialogResult::No == result)
 		{
