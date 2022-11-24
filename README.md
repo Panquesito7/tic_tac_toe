@@ -4,6 +4,8 @@
 
 Tic Tac Toe implemented in C++/CLI/CLR using Windows Forms. Created by **[@Panquesito7](https://github.com/Panquesito7)**.
 
+![Tic Tac Toe C++ showcase](https://user-images.githubusercontent.com/51391473/203686610-748de107-6c77-4c1c-824e-1f87483bdd51.png)
+
 ## Compiling/running the program
 
 You can play this game by compiling the code using [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/).\
