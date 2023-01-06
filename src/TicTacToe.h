@@ -1,6 +1,6 @@
 /**
  * Tic Tac Toe game, implemented in C++/CLI/CLR using Windows forms.
- * Copyright (C) 2020-2021 David Leal (halfpacho@gmail.com)
+ * Copyright (C) 2020-2022 David Leal (halfpacho@gmail.com)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -551,6 +551,7 @@ namespace TicTacToe {
 		if (System::Windows::Forms::DialogResult::No == result)
 		{
 			// "No" or "Cancel" button.
+			return;
 		}
 		else
 		{
