@@ -20,7 +20,7 @@ Next, compile the source code and ensure everything runs and works fine. If you'
 
 ## License
 
-Copyright (C) 2020-2022 David Leal (halfpacho@gmail.com)\
+Copyright (C) 2020-2023 David Leal (halfpacho@gmail.com)\
 This program is licensed under the [GNU GPLv3.0](http://www.gnu.org/licenses/gpl-3.0.html) license.
 
 See [`LICENSE.md`](https://github.com/Panquesito7/tic-tac-toe/blob/main/LICENSE.md) for more information.
