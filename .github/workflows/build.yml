@@ -1,0 +1,13 @@
+name: Build Windows Forms app
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  build:
+    runs-on: [windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.2
+      - name: Create 64-bit Release build
+        run: msbuild.exe /p:Configuration=Release /p:Platform=x64 tic_tac_toe.sln
+      - name: Create 32-bit Release build
+        run: msbuild.exe /p:Configuration=Release /p:Platform=x86 tic_tac_toe.sln
