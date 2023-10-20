@@ -1,0 +1,54 @@
+name: Create binaries on release
+on:
+  release:
+    types: [published]
+jobs:
+  release:
+    runs-on: [windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.2
+      - name: Create 64-bit Release build
+        run: msbuild.exe /p:Configuration=Release /p:Platform=x64 tic_tac_toe.sln
+      - name: Create 32-bit Release build
+        run: msbuild.exe /p:Configuration=Release /p:Platform=x86 tic_tac_toe.sln
+      - name: Pack the binaries into a ZIP and TAR.GZ files
+        shell: bash
+        run: bash .github/workflows/binaries.sh
+      - name: Upload 64-bit ZIP
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }} 
+          asset_path: ./binaries/tic_tac_toe-x64.zip
+          asset_name: tic_tac_toe-x64.zip
+          asset_content_type: application/zip
+      - name: Upload 64-bit GZIP
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }} 
+          asset_path: ./binaries/tic_tac_toe-x64.tar.gz
+          asset_name: tic_tac_toe-x64.tar.gz
+          asset_content_type: application/gzip
+      - name: Upload 32-bit ZIP
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }} 
+          asset_path: ./binaries/tic_tac_toe-x86.zip
+          asset_name: tic_tac_toe-x86.zip
+          asset_content_type: application/zip
+      - name: Upload 32-bit GZIP
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }} 
+          asset_path: ./binaries/tic_tac_toe-x86.tar.gz
+          asset_name: tic_tac_toe-x86.tar.gz
+          asset_content_type: application/gzip

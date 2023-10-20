@@ -1,0 +1,1 @@
+Full license information about the assets can be found in the `LICENSE.md` file in the root directory.
