@@ -438,7 +438,8 @@ namespace TicTacToe {
 
 		}
 #pragma endregion
-	array<Button^>^ buttons = gcnew array<Button^>(11); // Array of buttons
+	// Array containing the buttons to place O and X.
+	array<Button^>^ buttons = gcnew array<Button^>(11);
 
 	private: System::Void button_click(System::Object^ sender, System::EventArgs^ e) { // Buttons to place O and X
 		is_match(sender, buttons, label2);

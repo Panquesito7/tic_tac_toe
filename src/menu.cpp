@@ -25,6 +25,17 @@ using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
 
+/**
+ * @brief Shows the necessary buttons and labels that
+ * lets the user choose who's going to start first.
+ * This function can also hide those elements.
+ * @param turn_o The button that lets the user choose the O to start first
+ * @param turn_x The button that lets the user choose the X to start first
+ * @param label3 A label with the text "Who's going to start first?"
+ * @param backmodeselect A button that lets the user go back to the mode selection
+ * @param mode A boolean that determines if the elements should be shown or not
+ * @return void
+*/
 void choose_turn(Button^ turn_o, Button^ turn_x, Label^ label3, Button^ backmodeselect, bool mode) {
 	if (mode == true) {
 		turn_o->Enabled = true;
@@ -46,6 +57,21 @@ void choose_turn(Button^ turn_o, Button^ turn_x, Label^ label3, Button^ backmode
 	}
 }
 
+/**
+ * @brief Shows the necessary buttons and labels that
+ * lets the user choose the mode of the game.
+ * This function can also hide those elements, and show or hide
+ * the elements called in the `choose_turn` function.
+ * @param multiplayer_mode The button that will choose multiplayer as the current mode
+ * @param ai_mode The button that will choose A.I. as the current mode
+ * @param label4 A label with the text "Choose the mode of the game"
+ * @param turn_o The button that lets the user choose the O to start first
+ * @param turn_x The button that lets the user choose the X to start first
+ * @param backmodeselect A button that lets the user go back to the mode selection	
+ * @param label3 A label with the text "Who's going to start first?"
+ * @param mode A boolean that determines if the elements should be shown or not
+ * @return void
+*/
 void choose_mode(Button^ multiplayer_mode, Button^ ai_mode, Label^ label4, Button^ turn_o, Button^ turn_x, Button^ backmodeselect, Label^ label3, bool mode) {
 	if (mode == true) {
 		multiplayer_mode->Enabled = true;
