@@ -5,7 +5,7 @@
 Tic Tac Toe game made in C++ using Windows Forms, CLI/CLR.\
 A mode against A.I. will be released very soon!
 
-![Main screenshot.](https://github.com/Panquesito7/tic_tac_toe/assets/51391473/5ddd8683-3af7-4c2a-a054-f41c3e2bf011)
+![Main screenshot.](https://github.com/Panquesito7/tic_tac_toe/assets/51391473/b718f3c6-5625-4ee5-82c7-026aefb676ab)
 
 <!-- Add a new video in 1080p60 from YouTube -->
 
