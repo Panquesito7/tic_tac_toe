@@ -28,9 +28,18 @@ using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
 
-int turn = 0; // Whether to choose if the X or the O will place.
-bool match_ended = false; // If the match has ended or not.
+int turn = 0;
+bool match_ended = false;
 
+/**
+ * @brief The function to determine if it's a match or not
+ * Also updates the text of the buttons when clicking on them,
+ * the current turn, and a label that shows who's the winner.
+ * @param sender The item that triggered the event
+ * @param buttons An array containing various buttons
+ * @param label2 The label that shows who's the winner
+ * @return void
+*/
 void is_match(System::Object^ sender, array<Button^>^ buttons, Label^ label2) {
 	Button^ button = safe_cast<Button^>(sender);
 
