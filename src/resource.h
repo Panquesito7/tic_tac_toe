@@ -1,10 +1,10 @@
 //{{NO_DEPENDENCIES}}
-// Archivo de inclusión generado de Microsoft Visual C++.
-// Usado por tic_tac_toe.rc
+// Microsoft Visual C++ generated include file.
+// Used by tic_tac_toe.rc
 //
 #define IDI_ICON1                       101
 
-// Next default values for new objects
+// Default values used for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
