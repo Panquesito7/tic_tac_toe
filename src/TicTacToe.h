@@ -520,12 +520,7 @@ private: System::Void label1_MouseLeave(System::Object^ sender, System::EventArg
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	System::Windows::Forms::DialogResult result = MessageBox::Show(this, "You're going to be redirected to https://en.wikipedia.org/wiki/Tic-tac-toe. Continue?", "Redirect", MessageBoxButtons::YesNo, MessageBoxIcon::Exclamation);
 
-	if (System::Windows::Forms::DialogResult::No == result)
-	{
-		// "No" or "Cancel" button.
-		return;
-	}
-	else {
+	if (System::Windows::Forms::DialogResult::Yes == result) {
 		System::Diagnostics::Process::Start("https://en.wikipedia.org/wiki/Tic-tac-toe");
 	}
 }
